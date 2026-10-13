@@ -1,19 +1,22 @@
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import vm from 'node:vm';
 const html=readFileSync('index.html','utf8');
-assert.equal((html.match(/<section\b/g)||[]).length,9);
+const manifest=JSON.parse(readFileSync('slides/manifest.json','utf8'));
+assert.equal(manifest.sha256,createHash('sha256').update(readFileSync(manifest.source)).digest('hex'));
+assert.equal(manifest.pages.length,10);
+assert.equal((html.match(/<section\b/g)||[]).length,10);
 assert.ok(html.includes('lang="kk"'));
-for(const text of ['Әбдіқұл Арслан','Болатхан.К.','Пайдаланылған','Салыстырмалы кесте']) assert.ok(html.includes(text));
-for(const match of html.matchAll(/href="#([^"]+)"/g)) assert.ok(html.includes(`id="${match[1]}"`));
-for(const file of ['style.css','app.js','assets/manrope.ttf','assets/icon.svg']) assert.ok(existsSync(file));
-const script=readFileSync('app.js','utf8');
-new vm.Script(script);
-const context={};
-vm.runInNewContext(script.slice(0,script.indexOf('document.documentElement'))+';this.examples=examples;',context);
-assert.equal(Object.keys(context.examples).length,4);
-assert.equal(context.examples.cyano.carbon,'CO₂');
-assert.equal(context.examples.nitro.electron,'NH₃');
-assert.equal(context.examples.rhodo.type,'Фотоорганогетеротроф');
-for(const value of Object.values(context.examples)) assert.ok(new URL(value.url).protocol==='https:');
-console.log('PASS: 9 sections, Kazakh title and credits, internal links, local assets, JS syntax, 4 verified classification examples');
+for(const text of ['Әбдіқұл Арслан','Болатхан.К.','Биотехнология кафедрасы','Пайдаланылған әдебиеттер']) assert.ok(html.includes(text));
+for(const [i,page] of manifest.pages.entries()) {
+  assert.equal(page.page,i+1);
+  assert.ok(html.includes(`src="${page.image}"`));
+  const png=readFileSync(page.image);
+  assert.equal(png.readUInt32BE(16),1920);
+  assert.equal(png.readUInt32BE(20),1080);
+}
+for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) if(!match[1].startsWith('https:')) assert.ok(existsSync(match[1]),match[1]);
+assert.ok(!html.includes('<nav'));
+new vm.Script(readFileSync('app.js','utf8'));
+console.log('PASS: original PDF hash unchanged, 10 full-size pages in order, Kazakh credits, local assets, links and JS syntax');

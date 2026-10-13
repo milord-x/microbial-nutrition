@@ -1,0 +1,56 @@
+{
+  "source": "microbial-nutrition.pdf",
+  "sha256": "30ee1bd738d1e3480e89243ae6421abd627d9534e5146c958dc04154dbc78313",
+  "pages": [
+    {
+      "page": 1,
+      "image": "slides/page-01.png",
+      "title": "Титул беті"
+    },
+    {
+      "page": 2,
+      "image": "slides/page-02.png",
+      "title": "Микроорганизмдердің қоректік қажеттіліктері"
+    },
+    {
+      "page": 3,
+      "image": "slides/page-03.png",
+      "title": "Қоректену типтерін жіктеудің үш белгісі"
+    },
+    {
+      "page": 4,
+      "image": "slides/page-04.png",
+      "title": "Фотоавтотрофтар"
+    },
+    {
+      "page": 5,
+      "image": "slides/page-05.png",
+      "title": "Хемолитоавтотрофтар"
+    },
+    {
+      "page": 6,
+      "image": "slides/page-06.png",
+      "title": "Гетеротрофтар"
+    },
+    {
+      "page": 7,
+      "image": "slides/page-07.png",
+      "title": "Қоректену типтерінің салыстырмалы кестесі"
+    },
+    {
+      "page": 8,
+      "image": "slides/page-08.png",
+      "title": "ЖИ көмегімен жіктеу және ғылыми тексеру"
+    },
+    {
+      "page": 9,
+      "image": "slides/page-09.png",
+      "title": "Биотехнологиядағы маңызы"
+    },
+    {
+      "page": 10,
+      "image": "slides/page-10.png",
+      "title": "Пайдаланылған әдебиеттер"
+    }
+  ]
+}
