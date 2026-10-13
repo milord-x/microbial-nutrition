@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d0e">
+<meta name="description" content="Микроорганизмдердің қоректенуі: қоректену типтері, салыстырмалы кесте және ғылыми дереккөздермен тексерілген ЖИ жіктеуі.">
+<title>Микроорганизмдердің қоректенуі</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<canvas id="microcosm" aria-hidden="true"></canvas>
+<div class="atmosphere" aria-hidden="true"></div>
+<header><a class="wordmark" href="#title" aria-label="Титул бетіне"><span class="mark" aria-hidden="true">✳</span> МИКРОӘЛЕМ</a><div class="tools"><button id="motion" aria-label="Анимацияны тоқтату" title="Анимацияны тоқтату"><span aria-hidden="true">Ⅱ</span></button><button id="fullscreen" aria-label="Толық экран" title="Толық экран"><span aria-hidden="true">⛶</span></button></div></header>
+<main>
+<section id="title" class="scene hero" data-palette="mint">
+<div class="content hero-content">
+<p class="eyebrow reveal">Көзге көрінбейтін тіршілік</p>
+<h1 class="reveal">Микроорганизмдердің<br><span>қоректенуі</span></h1>
+<p class="hero-sub reveal">және олардың қорек көзіне<br>байланысты алуантүрлілігі</p>
+<p class="brief reveal">ЖИ көмегімен жіктеу, салыстыру<br>және ғылыми дереккөздер арқылы тексеру</p>
+<div class="credits reveal"><p><span>Орындаған</span>Әбдіқұл Арслан</p><p><span>Тексерген</span>Болатхан.К.</p></div>
+<a class="begin reveal" href="#principles">Микроәлемге ену <span aria-hidden="true">↓</span></a>
+</div><div class="specimen-tag" aria-hidden="true"><span></span> Тіршіліктің сан алуан стратегиясы</div>
+</section>
+<section id="principles" class="scene" data-palette="mint">
+<div class="content wide"><p class="eyebrow reveal">Қоректенудің негізі</p><h2 class="reveal">Бір жасуша.<br><em>Үш негізгі сұрақ.</em></h2>
+<div class="axes">
+<article class="axis reveal"><span class="axis-symbol">hν</span><h3>Энергия қайдан?</h3><p><b>Жарық</b> → фототроф</p><p><b>Химиялық реакция</b> → хемотроф</p></article>
+<article class="axis reveal"><span class="axis-symbol">C</span><h3>Көміртек қайдан?</h3><p><b>CO₂</b> → автотроф</p><p><b>Органикалық зат</b> → гетеротроф</p></article>
+<article class="axis reveal"><span class="axis-symbol">e⁻</span><h3>Электрон қайдан?</h3><p><b>Бейорганикалық зат</b> → литотроф</p><p><b>Органикалық зат</b> → органотроф</p></article>
+</div><p class="takeaway reveal">Энергия көзі мен көміртек көзі — екі бөлек белгі.</p><a class="source" href="https://openstax.org/books/biology-2e/pages/22-3-prokaryotic-metabolism" target="_blank" rel="noopener">OpenStax · Biology 2e, §22.3 ↗</a></div>
+</section>
+<section id="photo" class="scene" data-palette="lime">
+<div class="content split"><div class="copy"><p class="eyebrow reveal">Фотоавтотрофтар</p><h2 class="reveal">Жарықтан —<br><em>тіршілікке.</em></h2><p class="lead reveal">Жарық энергиясын пайдаланып,<br>CO₂-ден органикалық зат түзеді.</p><div class="facts reveal"><p><span>Энергия</span>Жарық</p><p><span>Көміртек</span>CO₂</p><p><span>Мысал</span>Цианобактериялар, микробалдырлар</p></div><p class="note reveal">Цианобактериялар электронды судан алады және оттек бөледі. Оттек бөлу барлық фототрофқа тән емес.</p><a class="source" href="https://openstax.org/books/microbiology/pages/8-6-photosynthesis" target="_blank" rel="noopener">OpenStax · Microbiology, §8.6 ↗</a></div>
+<div class="diagram solar reveal" role="img" aria-label="Жарық энергиясы мен көмірқышқыл газын пайдаланатын цианобактерияның сызбасы"><div class="sun"><span>☼</span></div><div class="light-beams"></div><div class="cell-chain"><i></i><i></i><i></i><i></i><i></i></div><span class="molecule molecule-a">CO₂</span><span class="molecule molecule-b">H₂O</span><span class="molecule molecule-c">O₂ ↑</span><p class="diagram-caption">Цианобактерия · сызбалық көрініс</p></div></div>
+</section>
+<section id="chemo" class="scene" data-palette="amber">
+<div class="content split"><div class="copy"><p class="eyebrow reveal">Хемолитоавтотрофтар</p><h2 class="reveal">Күн сәулесінсіз<br><em>де өмір бар.</em></h2><p class="lead reveal">Бейорганикалық заттардың тотығуы —<br>энергия мен электрон көзі.</p><div class="facts reveal"><p><span>Энергия</span>Химиялық реакциялар</p><p><span>Көміртек</span>CO₂</p><p><span>Мысал</span><i>Nitrosomonas</i></p></div><p class="note reveal">Аммиакты нитритке дейін тотықтырады. Бұл — азот айналымындағы нитрификацияның бір кезеңі.</p><a class="source" href="https://openstax.org/books/microbiology/pages/8-7-biogeochemical-cycles" target="_blank" rel="noopener">OpenStax · Microbiology, §8.7 ↗</a></div>
+<div class="diagram chemical reveal" role="img" aria-label="Аммиактың нитритке тотығуы энергия бөледі; көміртек CO2-ден алынады"><div class="reaction-orbit"><div class="reactor">e⁻<small>ЭНЕРГИЯ</small></div><span class="orbit-dot"></span></div><div class="reaction"><span>NH₃</span><b>→</b><span>NO₂⁻</span></div><p class="diagram-caption">Тотығу бағыты · толық теңдеу емес</p></div></div>
+</section>
+<section id="hetero" class="scene" data-palette="purple">
+<div class="content wide"><p class="eyebrow reveal">Гетеротрофтар</p><h2 class="reveal">Дайын көміртек.<br><em>Әртүрлі энергия.</em></h2><div class="duo">
+<article class="type-panel reveal"><div class="mini-organism purple" aria-hidden="true"><i></i><i></i><i></i></div><p class="small-label">ЖАРЫҚ + ОРГАНИКАЛЫҚ КӨМІРТЕК</p><h3>Фотогетеротрофтар</h3><p>Энергияны жарықтан, көміртекті органикалық қосылыстардан алады.</p><div class="example"><i>Rhodopseudomonas palustris</i><span>Жарықта, қолайлы ортада</span></div></article>
+<article class="type-panel reveal"><div class="mini-organism coral" aria-hidden="true"><i></i><i></i></div><p class="small-label">ХИМИЯЛЫҚ ЭНЕРГИЯ + ОРГАНИКАЛЫҚ КӨМІРТЕК</p><h3>Хемогетеротрофтар</h3><p>Органикалық қосылыстарды энергия және көміртек көзі ретінде пайдаланады.</p><div class="example"><i>Escherichia coli</i><span>Ашытқылар да осы топқа жатады</span></div></article>
+</div><a class="source" href="https://openstax.org/books/microbiology/pages/8-1-energy-matter-and-enzymes" target="_blank" rel="noopener">OpenStax · Microbiology, §8.1 ↗</a></div>
+</section>
+<section id="compare" class="scene" data-palette="mint">
+<div class="content wide"><p class="eyebrow reveal">Салыстырмалы кесте</p><h2 class="reveal">Төрт стратегия.<br><em>Бір мақсат — тіршілік.</em></h2><div class="table-wrap reveal" tabindex="0" role="region" aria-label="Қоректену типтерін салыстыру кестесі, шағын экранда көлденең жылжытыңыз"><table><thead><tr><th scope="col">Қоректену типі</th><th scope="col">Энергия көзі</th><th scope="col">Көміртек көзі</th><th scope="col">Электрон доноры¹</th><th scope="col">Мысал</th></tr></thead><tbody>
+<tr><th scope="row"><span class="dot lime"></span>Фотоавтотроф</th><td>Жарық</td><td>CO₂</td><td>H₂O</td><td>Цианобактериялар</td></tr>
+<tr><th scope="row"><span class="dot amber"></span>Хемолитоавтотроф</th><td>Бейорганикалық<br>заттардың тотығуы</td><td>CO₂</td><td>NH₃</td><td><i>Nitrosomonas</i></td></tr>
+<tr><th scope="row"><span class="dot purple"></span>Фотогетеротроф</th><td>Жарық</td><td>Органикалық зат</td><td>Органикалық зат</td><td><i>R. palustris</i>²</td></tr>
+<tr><th scope="row"><span class="dot coral"></span>Хемоорганогетеротроф</th><td>Органикалық<br>заттардың ыдырауы</td><td>Органикалық зат</td><td>Органикалық зат</td><td><i>E. coli</i>, ашытқылар</td></tr>
+</tbody></table></div><p class="table-note reveal">¹ Донорлар көрсетілген мысалдарға қатысты. ² Фотогетеротрофты өсу жағдайында.</p><a class="source" href="https://openstax.org/books/biology-2e/pages/22-3-prokaryotic-metabolism" target="_blank" rel="noopener">OpenStax · Biology 2e, §22.3 ↗</a></div>
+</section>
+<section id="adapt" class="scene" data-palette="purple">
+<div class="content split"><div class="copy"><p class="eyebrow reveal">Метаболизмнің икемділігі</p><h2 class="reveal">Орта өзгерсе,<br><em>стратегия өзгереді.</em></h2><p class="lead reveal"><i>Rhodopseudomonas palustris</i><br>төрт түрлі режимде өсе алады.</p><p class="note reveal">Жарық, оттек және қоректік заттардың қолжетімділігіне қарай метаболизмін өзгертеді. Сондықтан бір түрді әрдайым бір ғана типке бекіту дұрыс емес.</p><a class="source" href="https://doi.org/10.1038/nbt923" target="_blank" rel="noopener">Larimer et al. · Nature Biotechnology, 2004 ↗</a></div>
+<div class="diagram adaptive reveal" role="img" aria-label="R. palustris бактериясының төрт қоректену режимі"><div class="adapt-ring"></div><div class="adapt-core"><span>R. palustris</span><i></i></div><span class="mode top">Фотоавтотроф</span><span class="mode right">Фотогетеротроф</span><span class="mode bottom">Хемогетеротроф</span><span class="mode left">Хемоавтотроф</span></div></div>
+</section>
+<section id="ai" class="scene" data-palette="mint">
+<div class="content wide"><p class="eyebrow reveal">ЖИ көмегімен жіктеу</p><h2 class="reveal">ЖИ жүйелейді.<br><em>Дереккөз растайды.</em></h2><div class="ai-layout reveal"><div class="ai-explain"><p class="prompt-label">ҚОЛДАНЫЛҒАН СҰРАУ</p><blockquote>«Микроорганизмдерді энергия, көміртек және электрон көзі бойынша жікте. Мысал келтір және дереккөзбен тексер.»</blockquote><p class="note">ЖИ ұсынған жіктеу оқулықтармен және ғылыми мақаламен салыстырылды. Төменде — алдын ала тексерілген нәтижелер.</p><p class="check-line"><span>✓</span> Энергия мен көміртек ажыратылды</p><p class="check-line"><span>✓</span> Өсу жағдайы ескерілді</p><p class="check-line"><span>✓</span> Мысалдар дереккөзбен тексерілді</p></div><div class="ai-result"><div class="organism-picker" role="group" aria-label="Тексерілген мысалды таңдаңыз"><button data-example="cyano" aria-pressed="true">Цианобактерия</button><button data-example="nitro" aria-pressed="false">Nitrosomonas</button><button data-example="rhodo" aria-pressed="false">R. palustris</button><button data-example="ecoli" aria-pressed="false">E. coli</button></div><div id="result" aria-live="polite"><p class="result-status"><span></span>ДЕРЕККӨЗБЕН РАСТАЛДЫ</p><h3 id="result-type">Фотолитоавтотроф</h3><dl><div><dt>Энергия</dt><dd id="result-energy">Жарық</dd></div><div><dt>Көміртек</dt><dd id="result-carbon">CO₂</dd></div><div><dt>Электрон</dt><dd id="result-electron">H₂O</dd></div></dl><p id="result-note">Оттекті фотосинтез жүргізетін цианобактерияның типтік режимі.</p><a id="result-source" href="https://openstax.org/books/microbiology/pages/8-6-photosynthesis" target="_blank" rel="noopener">OpenStax · Microbiology, §8.6 ↗</a></div></div></div><p class="takeaway reveal">ЖИ жауабы — бастапқы нұсқа. Ғылыми дәлел — тексеру негізі.</p></div>
+</section>
+<section id="sources" class="scene" data-palette="mint">
+<div class="content wide"><p class="eyebrow reveal">Ғылыми негіз</p><h2 class="reveal">Пайдаланылған<br><em>әдебиеттер.</em></h2><div class="bibliography reveal">
+<a href="https://openstax.org/books/microbiology/pages/8-1-energy-matter-and-enzymes" target="_blank" rel="noopener"><span class="ref-kind">ОҚУЛЫҚ</span><div><h3>Parker N. et al. · Microbiology</h3><p>OpenStax, 2016 · §8.1 — қоректену типтері; §8.6 — фотосинтез; §8.7 — зат айналымдары.</p></div><span class="ref-arrow">↗</span></a>
+<a href="https://openstax.org/books/biology-2e/pages/22-3-prokaryotic-metabolism" target="_blank" rel="noopener"><span class="ref-kind">ОҚУЛЫҚ</span><div><h3>Clark M. A., Douglas M., Choi J. · Biology 2e</h3><p>OpenStax, 2018 · §22.3 — энергия, электрон және көміртек көздері.</p></div><span class="ref-arrow">↗</span></a>
+<a href="https://doi.org/10.1038/nbt923" target="_blank" rel="noopener"><span class="ref-kind">ҒЫЛЫМИ МАҚАЛА</span><div><h3>Larimer F. W. et al. · R. palustris геномы</h3><p>Complete genome sequence of the metabolically versatile photosynthetic bacterium Rhodopseudomonas palustris.<br>Nature Biotechnology, 22, 55–61 (2004). DOI: 10.1038/nbt923.</p></div><span class="ref-arrow">↗</span></a>
+</div><div class="closing reveal"><p>Микроәлемнің алуантүрлілігі —<br><span>қорек пен энергияны игеру алуантүрлілігі.</span></p><a href="#title" aria-label="Басына оралу">↑</a></div><p class="art-note">Биологиялық бейнелер — түсіндіруге арналған авторлық сызбалар.</p></div>
+</section>
+</main>
+<noscript><p class="noscript">Мәтін толық қолжетімді. Анимация мен интерактивті мысалдар үшін JavaScript қосыңыз.</p></noscript>
+</body>
+</html>
